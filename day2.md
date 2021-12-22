@@ -1,3 +1,5 @@
+## Git 특강 2일차
+
 ### 원격 저장소 연결 
 
 ```bash
@@ -21,6 +23,7 @@ origin  https://github.com/jibook/TIL.git (push)
 
 ```bash
 git push origin master
+git push -u origin master #다음부터는 깃푸시만 하면된다
 ```
 
 
@@ -29,7 +32,6 @@ git push origin master
 
 ```bash
 git log
-git log -p
-git log --one line
+git log -p #수정한 항목을 상세하게 보여줌
+git log --one line #한줄로 간단하게 해준당
 ```
-
