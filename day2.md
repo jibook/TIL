@@ -25,3 +25,11 @@ git push origin master
 
 
 
+### 버전 로그 보여줌(커밋 로그 보여줌)
+
+```bash
+git log
+git log -p
+git log --one line
+```
+
