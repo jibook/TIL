@@ -35,3 +35,22 @@ git log
 git log -p #수정한 항목을 상세하게 보여줌
 git log --one line #한줄로 간단하게 해준당
 ```
+
+
+
+### 원격 저장소에 받아오는 것
+
+- 리모트에서 로컬로 받아오는 것 clone, pull
+
+```bash
+git clone https://github.com/jibook/git-remote.git
+```
+
+- clone : 통째로 복제하는 것
+- pull : 변경사항만 가져오는 것
+
+``` bash
+git pull
+```
+
+- 풀먼저 푸쉬해야함 중요**
