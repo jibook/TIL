@@ -8,5 +8,7 @@
 # 1. Git
 
 - CIL
-- 여러가지를 배웟으
+- Vs code
+- GitHub
+
 
