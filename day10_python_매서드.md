@@ -155,7 +155,6 @@ s5=Series(['i love u','you know'])
 ```
 
 
-
 7. 문자 결합
 
 ```python
