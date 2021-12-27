@@ -183,3 +183,4 @@ s8
 Series(['a','b','c'],index = ['drwill','zzuyu','hyory'])
 Series(['a','b','c'],['drwill','zzuyu','hyory'])
 Series(['a','b','c'],['x','y','z'])
+
