@@ -1,3 +1,14 @@
+deli.head()
+deli.info()
+
+deli.describe()
+
+
+
+이런걸로 데이터를 확인한 후 전처리
+
+
+
 ### 전처리 순서
 
 
