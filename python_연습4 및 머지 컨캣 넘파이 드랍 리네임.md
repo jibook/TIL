@@ -99,3 +99,112 @@ pd.merge(emp, df_dept_new, on='deptno', how='outer')
 # 5      5  scott      30  4100    NaN
 ```
 
+
+
+## drop()
+
+- 특정 행, 컬럼 제거
+
+- 이름 전달
+
+
+
+```python
+emp.loc[emp['ename']=='scott']   # scott 관련된 record
+#   empno  ename  deptno   sal
+# 4      5  scott      30  4100
+emp.loc[emp['ename']=='scott',:]       # 스캇만 보여줘
+emp.loc[~(emp['ename']=='scott'),:]  # 스캇빼고 보여줘 ~
+
+#### scott 빼기
+emp.drop(4, axis=0)     # 행기준, 4번째 idx 제외
+```
+
+
+
+## shift
+
+- 행 또는 열을 이동
+
+- 전일자 대비 증감율
+
+```python
+emp['sal']  # dtype: int64 정수
+emp['sal'].shift()  #default : aixs=0 (행), dtype : float64 실수
+```
+
+
+
+#### 예제) 다음 데이터프레임에서 전일자 대비 증감율 출력
+
+```python
+s1
+# 2021/01/01    3000
+# 2021/01/02    3500
+# 2021/01/03    4200
+# 2021/01/04    2800
+# 2021/01/05    3600
+# dtype: int64
+
+s1.shift()
+# 2021/01/01       NaN
+# 2021/01/02    3000.0
+# 2021/01/03    3500.0
+# 2021/01/04    4200.0
+# 2021/01/05    2800.0
+# dtype: float64
+```
+
+- 1월 2일 증감률 >> (3500-3000)/3000
+
+```python
+(s1-s1.shift())/s1.shift()*100
+# 2021/01/01          NaN
+# 2021/01/02    16.666667
+# 2021/01/03    20.000000
+# 2021/01/04   -33.333333
+# 2021/01/05    28.571429
+# dtype: float64
+```
+
+
+
+## rename()
+
+- 행, 컬럼명 변경 
+
+```python
+emp.columns = ['emptno','ename','deptno','salary']
+
+emp.rename({'salary':'sal','deptno':'dept_no'}, axis=1)   # 컬럼대로 바꿔줌 
+```
+
+
+
+#### 예제) emp 데이터에서 ename을 idx로 설정 후 scott 을 SCOTT 변경
+
+```python
+emp
+emp.set_index('ename')   # ename을 맨앞, 즉 인덱스로 설정
+#        emptno  deptno  salary
+# ename                        
+# smith       1      10    4000
+# allen       2      10    4500
+# ford        3      20    4300
+# grace       4      10    4200
+# scott       5      30    4100
+# king        6      20    4000
+
+
+# 1.
+emp_1 = emp.set_index('ename')
+emp_1.rename({'scott':'SCOTT'},axis=0)
+
+# 2.
+emp.set_index('ename').rename({'scott':'SCOTT'})
+
+# 3.
+emp.index = emp['ename']
+emp.rename({'scott':'SCOTT'}, axis = 0)
+```
+
