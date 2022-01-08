@@ -208,3 +208,6 @@ emp.index = emp['ename']
 emp.rename({'scott':'SCOTT'}, axis = 0)
 ```
 
+
+
+- 데이터명.set_index('떙떙')    # '땡떙'으로 인덱스 명이 지정되는거야

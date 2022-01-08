@@ -11,7 +11,7 @@ Created on Sat Jan  8 16:16:40 2022
 # 컬럼이 서로 분리되어 있는 하나의 데이터프레임으로 합치기
 # 참조 조건 사용, 연관된 두 데이터를 병합(join)
 
-run my_modules
+# run my_modules
 
 import numpy as np
 import pandas as pd
@@ -46,12 +46,12 @@ df_dept = DataFrame({'deptno':[10,20,30], 'dname':['인사부','총무부','IT�
 # 두 데이터프레임(테이블) 참조조건 활용, 하나의 객체로 합치거나 데이터를 처리하는 행위
 # merge가 두 데이터 프레임 조인을 수행, 등가 조건만을 사용하여 조인이 가능
 
-pd.merge(left,             # 첫번째 데이터프레임
-         right,            # 두번째 데이터프레임
-         how='inner',      # 조인 방법(default = 'inner' ), 기본값
-         on=,              # 조인하는 컬럼(컬럼명이 서로 같을 때) 
-         left_on=,         # 첫번째 데이터프레임 조인(컬럼명이 서로 다를 때)
-         right_on=)        # 두번째 데이터프레임 조인(컬럼명이 서로 다를 때)
+# pd.merge(left,             # 첫번째 데이터프레임
+#          right,            # 두번째 데이터프레임
+#          how='inner',      # 조인 방법(default = 'inner' ), 기본값
+#          on=,              # 조인하는 컬럼(컬럼명이 서로 같을 때) 
+#          left_on=,         # 첫번째 데이터프레임 조인(컬럼명이 서로 다를 때)
+#          right_on=)        # 두번째 데이터프레임 조인(컬럼명이 서로 다를 때)
 
 
 pd.merge(emp, df_dept, on='deptno' )
