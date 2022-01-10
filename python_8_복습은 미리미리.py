@@ -5,6 +5,10 @@ Created on Sat Jan  8 22:23:16 2022
 @author: jhjh3
 """
 
+import numpy as np
+import pandas as pd
+from pandas import Series, DataFrame
+
 # 15. stack, unstack, pivot_table
 
 # 자료구조(datatype) 형태
