@@ -89,6 +89,46 @@ kimchi.pivot_table(index = '판매년도', columns = "제품", values = "판매�
 # run my_modules
 
 s1 = Series([1,2,3, np.nan])
+s2 = Series(['a','b','c',np.nan])
+
+
+# 1. NA 수정
+s1.mean()       # NaN 값 제외하고 평균값 산출함 >> 2.0
+s1.fillna(0)    # fillna 사용한 치환 >> 제일 많이 활용함
+'''
+0    1.0
+1    2.0
+2    3.0
+3    0.0
+dtype: float64
+'''
+s1.replace(np.nan,'a')   # replace 활용, 값 치환 메소드 NA 치환 가능
+'''
+0    1.0
+1    2.0
+2    3.0
+3      a
+dtype: object
+'''
+
+# 조건 색인을 해서 NA 처리 가능
+s1.isnull()
+s1[s1.isnull()]=0
+s1
+
+
+# 2. NA 로의 수정
+
+s3=Series(['서울','.','대전','.','대구','.','부산'])
+s3.replace('.',np.nan)
+
+
+
+
+
+
+
+
 
 
 
