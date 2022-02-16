@@ -216,3 +216,4 @@ emp.rename({'scott':'SCOTT'}, axis = 0)
 
 # 참고사이트
 # https://www.delftstack.com/ko/howto/python-pandas/how-to-count-the-frequency-a-value-occurs-in-pandas-dataframe/
+
