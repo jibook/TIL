@@ -211,3 +211,8 @@ emp.rename({'scott':'SCOTT'}, axis = 0)
 
 
 - 데이터명.set_index('떙떙')    # '땡떙'으로 인덱스 명이 지정되는거야
+
+
+
+# 참고사이트
+# https://www.delftstack.com/ko/howto/python-pandas/how-to-count-the-frequency-a-value-occurs-in-pandas-dataframe/
