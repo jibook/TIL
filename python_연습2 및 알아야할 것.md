@@ -13,7 +13,6 @@ array([1,2,3],[4, 5, 6])
 ```
 
 
-
 #### iloc, loc ****
 
 - iloc : positional indexing 숫자로 위치를 뽑아옴[행인덱스,열인덱스]

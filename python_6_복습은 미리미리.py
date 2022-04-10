@@ -124,6 +124,7 @@ kimchi = pd.read_csv('./data/kimchi.csv',encoding='cp949')
 
 # kimchi.groupby?
 
+
 kimchi.groupby(by=None,  # 그룹핑 할 컬럼(기준)
                 axis= 0,  # 그룹핑 연산 방향
                 level = None) # 멀티 인덱스일 경우, 특정 레벨의 값을 그룹핑 컬럼으로 사용
