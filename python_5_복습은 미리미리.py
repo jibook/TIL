@@ -6,6 +6,8 @@ Created on Wed Dec 29 22:07:16 2021
 """
 
 # run my_modules
+from pandas import Series, DataFrame
+import numpy as np
 
 df1= DataFrame(np.arange(1,17).reshape(4,4))
 df1
