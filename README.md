@@ -12,6 +12,9 @@
 - GitHub
 
 
+# 2. Python
+
+# 3. HTML & CSS
 
 
 
@@ -20,15 +23,10 @@
 import numpy as np
 import pandas as pd
 from pandas import Series, DataFrame
-
-
-
 import csv
 import matplotlib.pyplot as plt
 
-
-
-##### 한글 폰트 사용 
+## 한글 폰트 사용 
 
 plt.rc('font',family="Malgun Gothic")
 plt.rcParams['axes.unicode_minus']=False # 한글폰트 사용시 - 부호 표현
