@@ -18,6 +18,10 @@
 
 # 4. SQL
 
+# 5. FastAPI, FLASK
+
+# 6. Pycharm
+
 
 
 ## My_modules
