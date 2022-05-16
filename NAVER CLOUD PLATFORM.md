@@ -96,18 +96,25 @@
 1. 서버의 스펙을 정의한다 = Launch Configuration 
 2. 서버의 scale out in 대수를 정한다 = ASG **Auto Scaling Group 생성**
    1. 어떠한 서버를 정의해서
-3. 이벤트룰을 정한다 = event rule
-
+3. 이벤트룰을 정한다 = Event Rule
 
 
 몇대를 늘리고 줄일건지 정하는 것 : 그룹설정
+vps / subnet <- lc스펙 scale out 서버가 늘어난다.
 
-
-
-
-
-
-
----
+-----
 
 CDN+ / GCDN
+
+----
+
+#!/bin/bash
+yum -y remove mariadb libs
+yum -y install httpd php mysql php mysql
+systemctl enable httpd
+cd /var/www/html
+wget http://211.249.50.207/lab/lab.tgz
+sleep 10
+tar xvfz lab.tgz
+cat phpadd >> /etc/httpd/conf/httpd.conf
+systemctl start httpd
