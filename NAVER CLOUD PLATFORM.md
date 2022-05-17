@@ -107,6 +107,7 @@ vps / subnet <- lc스펙 scale out 서버가 늘어난다.
 CDN+ / GCDN
 
 ----
+콘솔 입력
 
 #!/bin/bash
 yum -y remove mariadb libs
@@ -118,3 +119,6 @@ sleep 10
 tar xvfz lab.tgz
 cat phpadd >> /etc/httpd/conf/httpd.conf
 systemctl start httpd
+
+
+----
