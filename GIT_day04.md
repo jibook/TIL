@@ -53,3 +53,20 @@ $ git reset HEAD~2 // 마지막 2개의 commit을 취소
 $ git reset --hard HEAD^
 ```
 
+
+
+## git push 취소하기
+
+```bash
+// 가장 최근의 commit을 취소 (기본 옵션: --mixed)
+$ git reset HEAD^
+```
+
+```bash
+// Reflog(브랜치와 HEAD가 지난 몇 달 동안에 가리켰었던 커밋) 목록 확인
+$ git reflog 또는 $ git log -g
+// 원하는 시점으로 워킹 디렉터리를 되돌린다.
+$ git reset HEAD@{number} 또는 $ git reset [commit id]
+```
+
+
