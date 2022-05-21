@@ -70,3 +70,4 @@ $ git reset HEAD@{number} 또는 $ git reset [commit id]
 ```
 
 
+
