@@ -71,3 +71,13 @@ $ git reset HEAD@{number} 또는 $ git reset [commit id]
 
 
 
+## git push 강제로 푸쉬하기 
+
+```bash
+$ git push origin [branch name] -f
+
+$ git push origin +[branch name]
+
+// Ex) master branch를 원격 저장소(origin)에 강제로 push
+$ git push origin +master
+```
