@@ -78,7 +78,7 @@ $ git push origin [branch name] -f
 
 $ git push origin +[branch name]
 
-// Ex) master branch를 원격 저장소(origin)에 강제로 push
+// ex) master branch를 원격 저장소(origin)에 강제로 push
 $ git push origin +master
 ```
 
